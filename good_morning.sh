@@ -11,15 +11,16 @@ RESET="\033[0m"
 # Hello message
 echo ""
 hour=`date +%H`
-if [ $hour -ge 6 ] && [ $hour -le 13 ]; # if 6 < hour < 13
+if [ $hour -ge 6 ] && [ $hour -le 13 ]; # if 6 > hour < 13
 then
 echo -e "Bom dia ninja!"
-elif [ $hour -le 19 ] # if hour < 19
+elif [ $hour -ge 13 ] && [ $hour -le 19] # if 13 > hour < 19
 then
 echo -e "Boa tarde ninja!"
 else    # if 6 < hour > 19 
 echo -e "Boa noite ninja!"
 fi
+
 
 # Date and time
 echo -e "Hoje é ${YELLOW}`date +%A`${RESET}, dia ${YELLOW}`date +%d`${RESET} de ${YELLOW}`date +%B`${RESET} de ${YELLOW}`date +%Y`${RESET}."
