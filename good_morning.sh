@@ -14,7 +14,7 @@ hour=`date +%H`
 if [ $hour -ge 6 ] && [ $hour -le 13 ]; # if 6 > hour < 13
 then
 echo -e "Bom dia ninja!"
-elif [ $hour -ge 13 ] && [ $hour -le 19] # if 13 > hour < 19
+elif [ $hour -ge 13 ] && [ $hour -le 19 ] # if 13 > hour < 19
 then
 echo -e "Boa tarde ninja!"
 else    # if 6 < hour > 19 
