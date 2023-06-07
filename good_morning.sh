@@ -26,8 +26,13 @@ fi
 echo -e "Hoje é ${YELLOW}`date +%A`${RESET}, dia ${YELLOW}`date +%d`${RESET} de ${YELLOW}`date +%B`${RESET} de ${YELLOW}`date +%Y`${RESET}."
 echo -e "São ${YELLOW}`date +%H`:`date +%M`${RESET}."
 
+# Get precise location of current device using IP-Tracer (git project) -> uncomment if installed
+#location=$(trace -m | grep "City" | cut -d ">" -f 2)
+#location=${location:11} # remove spaces and color from string
+
 # Weather 
 echo ""
+#weather=$(curl -s "wttr.in/$location" | head -n 7)
 weather=$(curl -s "wttr.in/Lisboa" | head -n 7)
 echo "$weather"
 
